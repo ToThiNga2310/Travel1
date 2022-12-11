@@ -12,12 +12,14 @@ namespace Travel1.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_OrderDetail
+    public partial class HoaDon
     {
-        public int OrderDetailId { get; set; }
-        public Nullable<int> OrderId { get; set; }
-        public Nullable<int> IdTour { get; set; }
-        public Nullable<int> Price { get; set; }
-        public Nullable<int> Quantity { get; set; }
+        public int IDHoadon { get; set; }
+        public Nullable<int> IDUser { get; set; }
+        public Nullable<int> IDTour { get; set; }
+        public Nullable<int> Tongtien { get; set; }
+    
+        public virtual Tour Tour { get; set; }
+        public virtual User User { get; set; }
     }
 }

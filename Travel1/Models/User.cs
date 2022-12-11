@@ -12,22 +12,23 @@ namespace Travel1.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Tour
+    public partial class User
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Tour()
+        public User()
         {
             this.HoaDons = new HashSet<HoaDon>();
         }
     
-        public int IDTour { get; set; }
-        public string Tieude { get; set; }
-        public string short_desc { get; set; }
-        public Nullable<System.DateTime> Batdau { get; set; }
-        public Nullable<System.DateTime> Ketthuc { get; set; }
-        public Nullable<int> Maxhanhkhach { get; set; }
-        public string long_desc { get; set; }
-        public Nullable<int> Gia { get; set; }
+        public int IDUser { get; set; }
+        public string Hoten { get; set; }
+        public string Gioitinh { get; set; }
+        public string Email { get; set; }
+        public string Sdt { get; set; }
+        public Nullable<bool> Level { get; set; }
+        public string Status { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }

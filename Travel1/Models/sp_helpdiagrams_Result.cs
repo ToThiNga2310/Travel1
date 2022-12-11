@@ -10,19 +10,13 @@
 namespace Travel1.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class tb_Contact
+    public partial class sp_helpdiagrams_Result
     {
-        public int ContactId { get; set; }
+        public string Database { get; set; }
         public string Name { get; set; }
-        public string Website { get; set; }
-        public string Email { get; set; }
-        public string Message { get; set; }
-        public Nullable<int> IsRead { get; set; }
-        public Nullable<System.DateTime> CreatedDate { get; set; }
-        public string CreatedBy { get; set; }
-        public Nullable<System.DateTime> ModifiedDate { get; set; }
-        public string ModifiedBy { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

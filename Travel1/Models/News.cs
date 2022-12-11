@@ -12,9 +12,15 @@ namespace Travel1.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Account
+    public partial class News
     {
-        public string Username { get; set; }
-        public string Password { get; set; }
+        public int IDNews { get; set; }
+        public string Tieude { get; set; }
+        public Nullable<int> IDCategory { get; set; }
+        public string Chitiet { get; set; }
+        public string Nguoitao { get; set; }
+        public string Image { get; set; }
+    
+        public virtual Category Category { get; set; }
     }
 }
