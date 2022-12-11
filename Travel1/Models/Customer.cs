@@ -6,39 +6,40 @@ namespace Travel1.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Tour")]
-    public partial class Tour
+    public partial class Customer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Tour()
+        public Customer()
         {
             BookTours = new HashSet<BookTour>();
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int TourID { get; set; }
+        public int ID { get; set; }
 
-        [StringLength(300)]
+        [StringLength(100)]
         public string Name { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? DateGo { get; set; }
+        public DateTime? Birthday { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? DateBack { get; set; }
+        public bool? Gender { get; set; }
+
+        [StringLength(200)]
+        public string Address { get; set; }
+
+        [StringLength(15)]
+        public string Tel { get; set; }
 
         [StringLength(50)]
-        public string Note { get; set; }
+        public string Email { get; set; }
 
-        public int TourGuideID { get; set; }
+        [StringLength(50)]
+        public string Pass { get; set; }
 
-        public int? NumPerson { get; set; }
-
-        public int? Price { get; set; }
+        public int? Status { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BookTour> BookTours { get; set; }
-
-        public virtual TourGuider TourGuider { get; set; }
     }
 }
