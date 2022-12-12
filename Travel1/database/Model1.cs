@@ -3,12 +3,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 
-namespace Travel1.Models
+namespace Travel1.database
 {
     public partial class Model1 : DbContext
     {
         public Model1()
-            : base("name=CSDL")
+            : base("name=db_dulich")
         {
         }
 

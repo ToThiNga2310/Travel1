@@ -134,20 +134,20 @@
     <Compile Include="Areas\Admin\Controllers\LogginController.cs" />
     <Compile Include="Areas\Admin\Controllers\TableController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="database\AccountAdmin.cs" />
+    <Compile Include="database\BookTour.cs" />
+    <Compile Include="database\Customer.cs" />
+    <Compile Include="database\Hotel.cs" />
+    <Compile Include="database\Model1.cs" />
+    <Compile Include="database\News.cs" />
+    <Compile Include="database\Place.cs" />
+    <Compile Include="database\Scenic_Culture.cs" />
+    <Compile Include="database\sysdiagram.cs" />
+    <Compile Include="database\Tour.cs" />
+    <Compile Include="database\TourGuider.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountAdmin.cs" />
-    <Compile Include="Models\BookTour.cs" />
-    <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\Hotel.cs" />
-    <Compile Include="Models\Model1.cs" />
-    <Compile Include="Models\News.cs" />
-    <Compile Include="Models\Place.cs" />
-    <Compile Include="Models\Scenic_Culture.cs" />
-    <Compile Include="Models\sysdiagram.cs" />
-    <Compile Include="Models\Tour.cs" />
-    <Compile Include="Models\TourGuider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +156,7 @@
     <Content Include="Content\admin\assets\demo\chart-pie-demo.js" />
     <Content Include="Content\admin\assets\demo\datatables-demo.js" />
     <Content Include="Content\admin\assets\img\error-404-monochrome.svg" />
+    <Content Include="Content\admin\css\loginstyle.css" />
     <Content Include="Content\admin\css\styles.css" />
     <Content Include="Content\admin\index.html" />
     <Content Include="Content\admin\js\datatables-simple-demo.js" />
@@ -406,6 +407,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

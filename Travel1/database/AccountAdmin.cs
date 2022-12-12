@@ -1,4 +1,4 @@
-namespace Travel1.Models
+namespace Travel1.database
 {
     using System;
     using System.Collections.Generic;

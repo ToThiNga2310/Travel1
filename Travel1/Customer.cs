@@ -1,4 +1,4 @@
-namespace Travel1.Models
+namespace Travel1
 {
     using System;
     using System.Collections.Generic;
@@ -6,34 +6,40 @@ namespace Travel1.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Scenic_Culture
+    public partial class Customer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Scenic_Culture()
+        public Customer()
         {
-            Hotels = new HashSet<Hotel>();
+            BookTours = new HashSet<BookTour>();
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
-        public int? PlaceID { get; set; }
-
+        [StringLength(100)]
         public string Name { get; set; }
 
-        [StringLength(500)]
-        public string TomTat { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime? Birthday { get; set; }
 
-        public string NoiDung { get; set; }
+        public bool? Gender { get; set; }
 
         [StringLength(200)]
-        public string ImgUrl { get; set; }
+        public string Address { get; set; }
+
+        [StringLength(15)]
+        public string Tel { get; set; }
+
+        [StringLength(50)]
+        public string Email { get; set; }
+
+        [StringLength(50)]
+        public string Pass { get; set; }
 
         public int? Status { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Hotel> Hotels { get; set; }
-
-        public virtual Place Place { get; set; }
+        public virtual ICollection<BookTour> BookTours { get; set; }
     }
 }

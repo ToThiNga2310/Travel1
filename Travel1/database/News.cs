@@ -1,4 +1,4 @@
-namespace Travel1.Models
+namespace Travel1.database
 {
     using System;
     using System.Collections.Generic;
@@ -22,7 +22,7 @@ namespace Travel1.Models
         [StringLength(200)]
         public string TomTat { get; set; }
 
-        [StringLength(200)]
+        [StringLength(2000)]
         public string NoiDung { get; set; }
 
         public DateTime? PostDate { get; set; }
